@@ -1,0 +1,26 @@
+@import "vars"; // Импорт переменных всегда первый
+
+@include font-face("FuturaFuturisCondExtraBoldC", "#{$url-font}/FuturaFuturisCondExtraBoldC/FuturaFuturisCondExtraBoldC", "eot" "ttf" "woff" "woff2") {
+	font-weight: 800;
+	font-display: swap;
+}
+@include font-face("FuturaFuturisC", "#{$url-font}/FuturaFuturisC/FuturaFuturisC", "eot" "ttf" "woff" "woff2") {
+	font-weight: 400;
+	font-display: swap;
+}
+@include font-face("Futura PT", "#{$url-font}/FuturaPT-Bold/FuturaPT-Bold", "eot" "ttf" "woff") {
+	font-weight: 400;
+	font-display: swap;
+}
+@include font-face("SF UI Text", "#{$url-font}/SFProDisplay-Bold/SFProDisplay-Bold", "eot" "ttf" "woff") {
+	font-weight: 800;
+	font-display: swap;
+}
+@include font-face("SF UI Text", "#{$url-font}/SFProDisplay-Regular/SFProDisplay-Regular", "eot" "ttf" "woff") {
+	font-weight: 400;
+	font-display: swap;
+}
+@include font-face("FuturaBookC", "#{$url-font}/FuturaBookC/FuturaBookC", "woff") {
+	font-weight: 400;
+	font-display: swap;
+}

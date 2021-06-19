@@ -1,0 +1,218 @@
+.recipe-photo {
+	padding-top: 64px;
+
+	&__image {
+		margin-bottom: 64px;
+
+		@include media(xs) {
+			margin-bottom: 42px;
+		}
+	}
+
+	&__ingredients {
+		margin-bottom: 155px;
+
+		@include media(xs) {
+			margin-bottom: 107px;
+		}
+	}
+
+	&__cooking {
+		margin-bottom: 64px;
+	}
+}
+
+.preview-sect {
+	@include b4p;
+	&__title {
+		margin-bottom: 64px;
+
+		@include media(xs) {
+			margin-bottom: 32px;
+			text-align: center;
+		}
+	}
+
+	&__media {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.recipe-sect {
+	display: flex;
+	justify-content: center;
+
+	&__block {
+		@include b4col(_col(10, md));
+		@include b4p;
+
+		@include media(xs) {
+			@include b4col(100%);
+		}
+	}
+}
+
+.ingredients {
+	padding: 32px 0;
+	border: 1px solid rgba(119, 155, 171, 0.3);
+
+	&__title {
+		margin-bottom: 16px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 40px;
+
+		@include media(xs) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__portions {
+		display: block;
+		margin-right: 24px;
+		font-family: "FuturaBookC", sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #242424;
+	}
+
+	&__counter {
+		@include b4col(96px);
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__left,
+	&__right {
+		@include b4col(50%);
+
+		@include media(xs) {
+			@include b4col(100%);
+		}
+	}
+
+	&__left {
+		padding-left: 120px;
+
+		@include media(xs) {
+			padding: 0 16px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__right {
+		padding-left: 120px - $grid-gutter-width / 2;
+
+		@include media(xs) {
+			padding: 0 16px;
+		}
+	}
+}
+
+.ingredients-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		margin-bottom: 16px;
+		padding: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.cooking {
+	padding: 83px 120px 32px;
+	border: 1px solid rgba(119, 155, 171, 0.3);
+
+	@include media(xs) {
+		padding: 64px 16px 24px;
+	}
+
+	&__time {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: inline-block;
+		height: 86px;
+		padding: 32px;
+		background-color: #ffffff;
+		border: 1px solid rgba(119, 155, 171, 0.3);
+
+		@include media(xs) {
+			display: flex;
+			align-items: center;
+			padding: 0 10px;
+			white-space: nowrap;
+		}
+	}
+
+	&__title {
+		margin-bottom: 38px;
+		text-transform: uppercase;
+		text-align: center;
+
+		@include media(xs) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.cooking-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: section;
+
+	&__item {
+		position: relative;
+		padding-left: 30px;
+		padding-bottom: 24px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #c4c4c4;
+
+		&::before {
+			counter-increment: section;
+			content: counters(section, ".") ".";
+			position: absolute;
+			top: -6px;
+			left: 0;
+			font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+			font-size: 24px;
+			font-weight: 800;
+			line-height: 27px;
+			color: #6dd1ff;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border: none;
+		}
+	}
+}
+
+.more-sect {
+	&__title {
+		margin-bottom: 32px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}

@@ -1,0 +1,54 @@
+// Общие настройки
+$font-formats: ("eot", "woff", "ttf"); // Доступны в snippets - eot, woff2, woff, ttf, svg
+$url-img: "../img"; // Путь к изображениям
+$url-font: "../fonts"; // Путь к шрифтам
+$url-img-libs: "../" + $url-img; // Путь к изображениям (для библиотек)
+$url-font-libs: "../" + $url-font; // Путь к шрифтам (для библиотек)
+
+// Переменные цветов
+$bg1: #fff;
+$bg2: #6dd1ff;
+$bg3: #a5e1ca;
+$bg4: #4259cf;
+$bg5: #e0f5ed;
+
+$text1: #fff;
+$text2: #6dd1ff;
+$text3: #a5e1ca;
+$text4: #779bab;
+$text5: #242424;
+$text6: #145776;
+$text7: #4259cf;
+
+$color1Btn: #6dd1ff;
+$color2Btn: #fff;
+$colorHoverBtn: #4259cf;
+$colorDisableBtn: #b0b0b0;
+
+$header_height: 72px; //Высота хедера
+$footer_height: 112px; //Высота футера
+
+// Настройки брэкпоинтов
+// prettier-ignore
+$breakpoints: (
+	xs: 0,
+	//sm: 1440px,
+	sm: 1200px,
+	md: 1440px,
+	lg: 1920px
+) !default;
+
+// Настройки контейнера
+// prettier-ignore
+$max-widths: (
+	xs: 100%,
+	sm: 1200px,
+	md: 1440px,
+	lg: 1920px
+) !default;
+
+$grid-gutter-width: 32px !default; // Отступ между колонками ( сумма падингов одной колонки )
+$grid-columns: 12 !default; // Количество колонок
+
+// Импорт вспомогательных сниппетов (всегда в конце)
+@import "node_modules/sass-snippets/scss/snippets";

@@ -1,0 +1,782 @@
+@import "_vars"; // Импорт переменных всегда первый
+
+.about-fetaxa-page {
+	position: relative;
+	display: block;
+	margin: auto;
+	max-width: 1920px;
+	margin-bottom: 120px;
+	@include media(xs) {
+		margin-bottom: 40px;
+	}
+	&__2007 {
+		margin-bottom: 56px;
+		@include media(xs) {
+			margin-bottom: 0;
+		}
+	}
+	&__2008 {
+		margin-bottom: 22px;
+		@include media(xs) {
+			margin-bottom: 0;
+		}
+	}
+	&__2010 {
+		margin-bottom: 152px;
+		@include media(xs) {
+			margin-bottom: 0;
+		}
+	}
+	&__2012 {
+		margin-bottom: 41px;
+		@include media(xs) {
+			margin-bottom: 0;
+		}
+	}
+	&__2017 {
+		margin-bottom: 207px;
+		@include media(xs) {
+			margin-bottom: 0;
+		}
+	}
+}
+.history-card {
+	padding-left: $grid-gutter-width / 2;
+	padding-right: $grid-gutter-width / 2;
+	@include media(xs) {
+		padding-top: 40px;
+	}
+	&__title {
+		color: $text2;
+		text-transform: uppercase;
+		margin-bottom: 28px;
+		@include media(xs) {
+			margin-bottom: 24px;
+		}
+	}
+	&__year {
+		font-family: "FuturaBookC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 120px;
+		line-height: 136px;
+		@include media(xs) {
+			font-size: 75px;
+			line-height: 85px;
+		}
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+	&__description {
+		@include media(xs) {
+			width: auto;
+			padding-right: 12%;
+		}
+	}
+}
+.about-fetaxa-img-block {
+	position: absolute;
+	display: flex;
+	right: 0;
+	left: 0;
+	@include media(xs) {
+		position: static;
+	}
+}
+.about-product-card {
+	display: flex;
+	align-items: center;
+	@include media(xs) {
+		position: relative;
+		padding: 125px $grid-gutter-width / 2 24px;
+	}
+	&__img-wrap {
+		position: relative;
+		padding: 28px 0;
+		@include b4col(_col(3));
+		@include media(xs) {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			max-width: 328px;
+			padding: 0 $grid-gutter-width / 2;
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+	&__color-bg-wrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		@include media(xs) {
+			display: none;
+		}
+	}
+	&__color-bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100vw;
+		z-index: -1;
+	}
+	&__text-content {
+		position: relative;
+		@include b4col(_col(4));
+		@include media(xs) {
+			@include b4col(_col(12));
+			text-align: center;
+		}
+	}
+	&__title {
+		font-family: "FuturaBookC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 32px;
+		text-transform: uppercase;
+		@include media(xs) {
+			font-size: 20px;
+		}
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+	&__button {
+		display: inline-block;
+	}
+}
+.history-line {
+	display: flex;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 630px;
+	bottom: 0;
+	z-index: -1;
+	&__col {
+		display: flex;
+		justify-content: flex-end;
+		width: _col(5);
+	}
+	&__img-container {
+		display: flex;
+		justify-content: center;
+		width: 1 / 5 * 100%;
+	}
+	&__line {
+		width: 3px;
+		height: 100%;
+		background-color: #ccf3fd;
+	}
+	@include media(xs) {
+		top: 754px;
+		&__col {
+			width: _col(12);
+		}
+	}
+}
+.history-point {
+	display: flex;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	&__col {
+		display: flex;
+		justify-content: flex-end;
+		width: _col(5);
+		@include media(xs) {
+			width: _col(12);
+		}
+	}
+	&__img-container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		width: 1 / 5 * 100%;
+	}
+	&__img {
+		margin-top: 32px;
+		width: 56px;
+		height: 56px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='58' height='58' fill='none'%3E%3Cpath fill='%23fff' stroke='%23CCF3FD' stroke-width='8' d='M6 29L29 6l23 23-23 22z'/%3E%3C/svg%3E");
+		@include media(xs) {
+			width: 40px;
+			height: 40px;
+			margin-top: 60px;
+		}
+	}
+}
+
+.sect-2007 {
+	&__banner {
+		position: relative;
+		height: 480px;
+		@include b4col(_col(10));
+		padding-right: $grid-gutter-width / 2;
+		margin-bottom: 56px;
+		@include media(xs) {
+			@include b4col(_col(12));
+			padding: 0;
+			margin-bottom: 0;
+			height: 357px;
+		}
+	}
+	&__img-block {
+		justify-content: flex-end;
+		align-items: center;
+		top: 289px;
+		@include media(xs) {
+			justify-content: center;
+		}
+	}
+	&__img {
+		width: 1104px;
+		@include media(md) {
+			@include b4col(_col(7));
+		}
+		@include media(xs) {
+			height: 338px;
+			width: auto;
+			max-width: none;
+			flex: 0 0 auto;
+		}
+	}
+	&__history-card-row {
+		display: flex;
+		position: relative;
+	}
+	&__history-card {
+		position: relative;
+		@include b4col(_col(4));
+		@include media(xs) {
+			@include b4col(_col(12));
+			margin-bottom: 186px;
+		}
+	}
+	&__history-point-img {
+		width: 78px;
+		height: 78px;
+		margin-top: 24px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='78' fill='none'%3E%3Cpath fill='%23fff' stroke='%23CCF3FD' stroke-width='8' d='M6 39L39 6l33 33-33 33z'/%3E%3Cpath fill='%23fff' stroke='%23CCF3FD' stroke-width='8' d='M16 49l23-23 23 23-23 23z'/%3E%3C/svg%3E");
+		@include media(xs) {
+			width: 40px;
+			height: 40px;
+			margin-top: 57px;
+		}
+	}
+}
+.about-banner {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+	padding: 40px $grid-gutter-width / 2;
+	@include media(xs) {
+		padding: 16px $grid-gutter-width / 2;
+	}
+	&__content {
+		width: 568px;
+		@include media(sm) {
+			width: _col(5, sm) - $grid-gutter-width;
+		}
+	}
+	&__logo {
+		width: 441px;
+		margin-bottom: 54px;
+		@include media(sm) {
+			width: 100%;
+		}
+		@include media(xs) {
+			width: 237px;
+			margin-bottom: 21px;
+		}
+	}
+	&__bg-color {
+		position: absolute;
+		background-color: $bg2;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 100vw;
+		z-index: -1;
+	}
+}
+.sect-2008 {
+	&__img-block {
+		justify-content: flex-start;
+		top: 50px;
+		@include media(xs) {
+			justify-content: center;
+		}
+	}
+	&__img-col {
+		position: relative;
+		@include b4col(_col(4));
+		@include media(xs) {
+			width: 100%;
+			max-width: none;
+			flex: 0 0 auto;
+		}
+	}
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 482px;
+		@include media(xs) {
+			position: relative;
+			width: 100%;
+			height: auto;
+			min-height: 278px;
+		}
+
+	}
+	&__history-card-row {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 64px;
+		@include media(xs) {
+			margin-bottom: 150px;
+		}
+	}
+	&__history-card {
+		@include b4col(_col(7));
+		@include media(xs) {
+			@include b4col(_col(12));
+		}
+	}
+	&__history-description {
+		width: 4 / 7 * 100%;
+		@include media(xs) {
+			width: auto;
+		}
+	}
+	&__product-card {
+		justify-content: flex-end;
+		@include media(xs) {
+			background-color: #d5f7ff;
+		}
+	}
+	&__product-bg-wrap {
+		right: 0;
+		width: (2 / 3) * 100%;
+	}
+	&__product-bg {
+		background-color: #d5f7ff;
+	}
+	&__product-title {
+		color: #004494;
+	}
+	&__product-subtitle {
+		color: #004494;
+	}
+	&__product-button {
+		color: #004494;
+		border-color: #004494;
+		background-color: transparent;
+	}
+	&__pattern {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		width: 267px;
+		@include media(sm) {
+			width: 344px;
+		}
+		@include media(xs) {
+			top: -122px;
+			left: 0;
+			right: auto;
+			width: 102px;
+			transform: rotate(180deg);
+		}
+	}
+}
+.sect-2010 {
+	&__img-block {
+		justify-content: flex-end;
+		top: 343px;
+		@include media(xs) {
+			justify-content: center;
+		}
+	}
+	&__img-col {
+		position: relative;
+		@include b4col(_col(5));
+		@include media(xs) {
+			width: 100%;
+			max-width: none;
+			flex: 0 0 auto;
+		}
+	}
+	&__img {
+		//position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		height: 380px;
+		@include media(xs) {
+			position: relative;
+			width: 100%;
+			height: auto;
+			min-height: 210px;
+			min-width: 433px;
+		}
+	}
+	&__history-card-row {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 64px;
+		@include media(xs) {
+			margin-bottom: 150px;
+		}
+	}
+	&__history-card {
+		@include b4col(_col(4));
+		@include media(xs) {
+			@include b4col(_col(12));
+		}
+	}
+	&__product-card {
+		justify-content: flex-start;
+		@include media(xs) {
+			background-color: #f7f6c8;
+		}
+	}
+	&__product-bg-wrap {
+		left: 0;
+		width: 8 / 3 * 100%;
+	}
+	&__product-bg {
+		background-color: #f7f6c8;
+		right: 0;
+	}
+	&__product-title {
+		color: #004494;
+	}
+	&__product-subtitle {
+		color: #004494;
+	}
+	&__product-button {
+		color: #004494;
+		border-color: #004494;
+		background-color: transparent;
+	}
+	&__pattern {
+		position: absolute;
+		bottom: -280px;
+		right: 0;
+		z-index: -1;
+		width: 310px;
+		@include media(sm) {
+			width: 344px;
+		}
+		@include media(xs) {
+			display: none;
+		}
+	}
+}
+.sect-2012 {
+	&__img-block {
+		justify-content: flex-start;
+		top: 0;
+		@include media(xs) {
+			justify-content: center;
+		}
+	}
+	&__img-col {
+		position: relative;
+		@include b4col(_col(4));
+		@include media(xs) {
+			width: 100%;
+			max-width: none;
+			flex: 0 0 auto;
+		}
+	}
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 678px;
+		@include media(xs) {
+			position: relative;
+			min-height: 294px;
+			height: auto;
+			width: 100%;
+			min-width: 360px;
+		}
+	}
+	&__history-card-row {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 64px;
+		@include media(xs) {
+			margin-bottom: 150px;
+		}
+	}
+	&__history-card {
+		@include b4col(_col(7));
+		@include media(xs) {
+			@include b4col(_col(12));
+		}
+	}
+	&__history-description {
+		width: 4 / 7 * 100%;
+		@include media(xs) {
+			width: auto;
+		}
+	}
+	&__product-card {
+		justify-content: flex-end;
+		@include media(xs) {
+			display: flex;
+			flex-direction: column-reverse;
+			background-color: $bg4;
+		}
+	}
+	&__product-bg-wrap {
+		left: 0;
+		width: (2 / 3) * 100%;
+	}
+	&__product-bg {
+		background-color: $bg4;
+		right: 0;
+	}
+	&__product-title {
+		color: #004494;
+		@include media(xs) {
+			color: $text1;
+		}
+	}
+	&__product-subtitle {
+		color: #004494;
+		@include media(xs) {
+			color: $text1;
+		}
+	}
+	&__product-button {
+		border-color: #004494;
+		color: #004494;
+		background-color: transparent;
+		@include media(xs) {
+			border-color: $text1;
+			color: $text1;
+		}
+	}
+	&__product-img-wrap {
+		padding-top: 118px;
+		padding-bottom: 118px;
+	}
+	&__product-add-text {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: _col(5);
+		padding-left: 104px;
+		padding-bottom: 104px;
+		opacity: 0.63;
+		@include media(sm) {
+			padding-bottom: 40px;
+		}
+		@include media(xs) {
+			position: static;
+			padding: 32px 0 0;
+			width: _col(12);
+		}
+	}
+}
+.sect-2017 {
+	&__img-block {
+		justify-content: flex-start;
+		top: 50px;
+		@include media(xs) {
+			justify-content: center;
+		}
+	}
+	&__img-col {
+		position: relative;
+		@include b4col(_col(4));
+		@include media(xs) {
+			width: 100%;
+			max-width: none;
+			flex: 0 0 auto;
+		}
+	}
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 489px;
+		@include media(xs) {
+			position: relative;
+			width: 100%;
+			height: auto;
+			min-height: 278px;
+			min-width: 433px;
+		}
+	}
+	&__history-card-row {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 64px;
+		@include media(xs) {
+			margin-bottom: 150px;
+		}
+	}
+	&__history-card {
+		@include b4col(_col(7));
+		@include media(xs) {
+			@include b4col(_col(12));
+		}
+	}
+	&__history-description {
+		width: 4 / 7 * 100%;
+		@include media(xs) {
+			width: auto;
+		}
+	}
+	&__product-card {
+		justify-content: flex-end;
+		@include media(xs) {
+			background-color: $bg2;
+		}
+	}
+	&__product-bg-wrap {
+		right: 0;
+		width: (2 / 3) * 100%;
+	}
+	&__product-bg {
+		background-color: $bg2;
+	}
+	&__product-title {
+		color: $text1;
+	}
+	&__product-subtitle {
+		color: $text1;
+	}
+	&__pattern {
+		position: absolute;
+		bottom: -250px;
+		right: 0;
+		z-index: 1;
+		width: 344px;
+		@include media(xs) {
+			bottom: -216px;
+			right: -42px;
+			width: 202px;
+		}
+	}
+}
+.sect-2020 {
+	background-color: $bg1;
+	&__img-block {
+		justify-content: flex-start;
+		top: 157px;
+		padding-left: $grid-gutter-width / 2;
+		@include media(xs) {
+			justify-content: center;
+			padding: 0;
+		}
+	}
+	&__img-block-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include b4col(_col(4));
+		@include media(xs) {
+			@include b4col(_col(12));
+		}
+	}
+	&__img {
+		width: 100%;
+		@include media(xs) {
+			height: 58px;
+			width: auto;
+			max-width: none;
+			flex: 0 0 auto;
+		}
+	}
+	&__history-card-row {
+		display: flex;
+		justify-content: flex-end;
+		@include media(xs) {
+			margin-bottom: 40px;
+		}
+	}
+	&__history-card {
+		@include b4col(_col(7));
+		@include media(xs) {
+			@include b4col(_col(12));
+		}
+	}
+	&__history-description {
+		width: 4 / 7 * 100%;
+		margin-bottom: 24px;
+		@include media(xs) {
+			width: auto;
+		}
+	}
+	&__product-button {
+		color: $text2;
+		border-color: $text2;
+		background-color: transparent;
+		@include media(xs) {
+			display: block;
+			margin: auto;
+			width: fit-content;
+		}
+	}
+	&__history-point-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		//margin-top: 30px;
+		//@include media(xs) {
+		//	margin-top: 0;
+		//}
+	}
+	&__history-point-line {
+		width: 3px;
+		height: 20px;
+		background-color: #ccf3fd;
+		@include media(xs) {
+			height: 60px;
+		}
+	}
+	&__history-point-img {
+		width: 78px;
+		height: 78px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='78' fill='none'%3E%3Cpath fill='%23fff' stroke='%23CCF3FD' stroke-width='8' d='M6 39L39 6l33 33-33 33z'/%3E%3Cpath fill='%23fff' stroke='%23CCF3FD' stroke-width='8' d='M16 49l23-23 23 23-23 23z'/%3E%3C/svg%3E");
+		transform: rotate(180deg);
+		@include media(xs) {
+			width: 40px;
+			height: 40px;
+			margin-top: -1px;
+		}
+	}
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>О Фетаксе</title>
+
+	<link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="./favicon/apple-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/webmanifest.webmanifest">
+	<meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#6dd1ff">
+
+	<link rel="stylesheet" href="./css/libs/bootstrap.css">
+	<link rel="stylesheet" href="./css/libs/slick.css">
+	<link rel="stylesheet" href="./css/libs/slick-theme.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<script src="./js/libs/jquery-3.2.1.min.js"></script>
+	<script src="./js/libs/jquery.smoothscroll.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/libs/slick.min.js"></script>
+	<script src="./js/libs/jquery.switchPopup.js"></script>
+</head>
+<body>
+<header class="header">
+	<div class="container-fluid header__inner">
+		<button class="header__close-button close-button js-tgl-dropdown-menu"></button>
+		<button class="burger js-tgl-dropdown-menu">
+			<span class="burger__item"></span>
+			<span class="burger__item"></span>
+			<span class="burger__item"></span>
+		</button>
+		<a  href="./home.html">
+			<img class="header__logo" src="./img/logo_slogan.png">
+		</a>
+		<div class="header__menu">
+			<nav class="header-menu">
+				<a href="./recipes.html" class="header-menu__item"><h4 class="header-menu__item h4">Рецепты</h4></a>
+				<a href="./about-fetaxa.html" class="header-menu__item"><h4 class="h4">о фетаксе</h4></a>
+				<a href="#" class="header-menu__item"><h4 class="h4">где купить</h4></a>
+				<a href="https://www.instagram.com/fetaxa_ru/" target="_blank" class="header-menu__item"><h4 class="h4">вкусный instagram</h4></a>
+				<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank" class="header-menu__item"><h4 class="h4">мы в эфире</h4></a>
+			</nav>
+		</div>
+		<button class="header__search-button search-button js-tgl-header-search">
+			<img class="header__search-icon" src="./img/icons/search.svg">
+		</button>
+		<div class="header__search-form-wrap">
+			<div class="header__search-form container-fluid">
+				<form action="./search.html/" class="header-form-search">
+					<div class="header-form-search__field">
+						<input class="form-search-input" name="q" type="search" placeholder="Введите текст для поиска">
+						<button class="header-form-search__search search-button js-tgl-header-search" type="button">
+							<img class="search-button__icon" src="./img/icons/search.svg">
+						</button>
+						<button class="header-form-search__reset close-button js-tgl-header-search" type="reset"></button>
+					</div>
+				</form>
+				<div class="header__search-dropdown header-search-dropdown">
+					<div class="header-search-dropdown__title b-content b-content_p2 b-content_color_4">
+						<p>Все результаты</p>
+					</div>
+					<ul class="header-search-dropdown__list">
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/1.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Блины с Фетаксой «Классической в рассоле», рыбкой, творогом и зеленью</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/2.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Салат «Особенный» с Фетаксой «Классической в рассоле»</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/3.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Спагетти с перепелиным яйцом, Фетаксой «Классической в рассоле» и перцем
+								</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/4.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Луковый пирог с Фетаксой «Классической в рассоле»</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/5.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Салат с редисом, огурцом и Фетаксой «Классической в рассоле»</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/6.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Горячие бутерброды с Фетаксой «Классической в рассоле» и глазуньей</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/3.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Спагетти с перепелиным яйцом, Фетаксой «Классической в рассоле» и перцем</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/1.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Блины с Фетаксой «Классической в рассоле», рыбкой, творогом и зеленью</h6>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid
+		 						header__dropdown-menu
+		 						header-dropdown-menu
+		 						popup"
+		>
+			<nav class="header-dropdown-menu__main-list header-dropdown-menu-main-list">
+				<a href="./about-fetaxa.html" class="header-dropdown-menu-main-list__item"><h2 class="h2">о фетаксе</h2></a>
+				<a href="./recipes.html" class="header-dropdown-menu-main-list__item"><h2 class="h2">Рецепты</h2></a>
+				<a href="#" class="header-dropdown-menu-main-list__item"><h2 class="h2">где купить</h2></a>
+			</nav>
+			<nav class="header-dropdown-menu__second-list header-dropdown-menu-second-list">
+				<a href="https://www.instagram.com/fetaxa_ru/" target="_blank" class="header-dropdown-menu-second-list__item"><h4 class="h4">вкусный instagram</h4></a>
+				<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank" class="header-dropdown-menu-second-list__item"><h4 class="h4">тв-ролики</h4></a>
+			</nav>
+			<div class="header-dropdown-menu__footer header-dropdown-menu-footer">
+				<div>
+					<nav class="header-dropdown-menu-footer__menu header-dropdown-menu-footer-menu">
+						<a href="./home.html#feedback-form" class="header-dropdown-menu-footer-menu__item link js-tgl-dropdown-menu">Обратная связь</a>
+						<a href="#" class="header-dropdown-menu-footer-menu__item link">Пользовательское соглашение</a>
+					</nav>
+					<ul class="social">
+						<li class="social__item">
+							<a href="https://www.instagram.com/fetaxa_ru/" target="_blank">
+								<img src="./img/icons/social/insta.svg"></a>
+						</li>
+						<li class="social__item">
+							<a href="https://www.facebook.com/Fetaxa" target="_blank">
+								<img src="./img/icons/social/fb.svg"></a>
+						</li>
+						<li class="social__item">
+							<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank">
+								<img src="./img/icons/social/youtube1.svg"></a>
+						</li>
+						<li class="social__item">
+							<a href="http://vk.com/fetaxa" target="_blank">
+								<img src="./img/icons/social/vk.svg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="about-fetaxa-page">
+	<div class="history-line">
+		<div class="history-line__col">
+			<div class="history-line__img-container">
+				<div class="history-line__line"></div>
+			</div>
+		</div>
+	</div>
+	<section class="about-fetaxa-page__2007 sect-2007">
+		<div class="sect-2007__banner">
+			<div class="about-banner">
+				<div class="about-banner__bg-color"></div>
+				<div class="about-banner__content">
+					<img src="./content/about-fetaxa/logo.svg" class="about-banner__logo" alt="О фетаксе">
+					<div class="about-banner__subtitle b-content b-content_p1 b-content_color_1">
+						<p>
+							С любой «Фетаксой» можно приготовить множество блюд, так как она прекрасно сочетается со свежими овощами, зеленью, мясом или рыбой, делая блюда вкусными, а ежедневное меню – разнообразным.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sect-2007__img-block about-fetaxa-img-block">
+			<img src="./content/about-fetaxa/2007.jpg" class="sect-2007__img" alt="Салат с фетаксой">
+		</div>
+		<div class="sect-2007__history-card-row">
+			<div class="sect-2007__history-card history-card">
+				<div class="history-card__title">
+					<span class="history-card__year">2007</span>
+					<span class="h6">год</span>
+				</div>
+				<h3 class="history-card__subtitle h3">Фетакса в России</h3>
+				<div class="history-card__description b-content b-content_p1">
+					<p>
+						Бренд «Фетакса» появился в России в 2007 году и с того времени не перестает радовать хозяек своими новинками, с которыми можно легко и быстро приготовить множество блюд.
+					</p>
+				</div>
+
+			</div>
+			<div class="history-point">
+				<div class="history-point__col">
+					<div class="history-point__img-container">
+						<div class="sect-2007__history-point-img"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-fetaxa-page__2008 sect-2008">
+		<img class="sect-2008__pattern" src="./img/about-fetaxa/patterns/pattern_1.svg" alt="Фоновый орнамент 1">
+		<div class="sect-2008__img-block about-fetaxa-img-block">
+			<div class="sect-2008__img-col">
+				<img src="./content/about-fetaxa/2008.jpg" class="sect-2008__img" alt="Салат с фетаксой и оливками">
+			</div>
+		</div>
+		<div class="sect-2008__history-card-row">
+			<div class="history-point">
+				<div class="history-point__col">
+					<div class="history-point__img-container">
+						<div class="history-point__img"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sect-2008__history-card history-card">
+				<div class="history-card__title">
+					<span class="history-card__year">2008</span>
+					<span class="h6">год</span>
+				</div>
+				<h3 class="history-card__subtitle h3">Обновление классики</h3>
+				<div class="sect-2008__history-description history-card__description b-content b-content_p1">
+					<p>
+						Основным преимуществом «Фетаксы» является особенная плотная консистенция, благодаря которой продукт легко режется, не крошится и прекрасно держит форму.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sect-2008__product-card about-product-card">
+			<div class="about-product-card__img-wrap">
+				<div class="sect-2008__product-bg-wrap about-product-card__color-bg-wrap">
+					<div class="sect-2008__product-bg about-product-card__color-bg"></div>
+				</div>
+				<img src="./content/about-fetaxa/products/2008.png" class="about-product-card__img" alt="Упаковка плавленного сыра фетакса">
+			</div>
+			<div class="sect-2008__product-text-content about-product-card__text-content">
+				<div class="sect-2008__product-title about-product-card__title">
+					фетакса
+				</div>
+				<h3 class="sect-2008__product-subtitle about-product-card__subtitle h3">«идеально для салата»</h3>
+				<a href="#" class="sect-2008__product-button about-product-card__button button">Попробовать</a>
+			</div>
+		</div>
+	</section>
+	<section class="about-fetaxa-page__2010 sect-2010">
+		<div class="sect-2010__img-block about-fetaxa-img-block">
+			<img class="sect-2010__pattern" src="./img/about-fetaxa/patterns/pattern_2.svg" alt="Фоновый паттерн 2">
+			<div class="sect-2010__img-col">
+				<img src="./content/about-fetaxa/2010.jpg" class="sect-2010__img" alt="Салат с фетаксой, зеленью и помидорами">
+			</div>
+		</div>
+		<div class="sect-2010__history-card-row">
+			<div class="history-point">
+				<div class="history-point__col">
+					<div class="history-point__img-container">
+						<div class="history-point__img"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sect-2010__history-card history-card">
+				<div class="history-card__title">
+					<span class="history-card__year">2010</span>
+					<span class="h6">год</span>
+				</div>
+				<h3 class="history-card__subtitle h3">яркий греческих вкус</h3>
+				<div class="history-card__description b-content b-content_p1">
+					<p>
+						Для любителей ярких греческих вкусов в ассортименте этой линейки появилась «Фетакса с маслинами и паприкой». «Фетакса» с плотной консистенцией прекрасно подходит для приготовления салатов – помимо исключительного вкуса, блюдо всегда будет очень красиво, эстетично выглядеть и радовать хозяйку, её близких и гостей.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sect-2010__product-card about-product-card">
+			<div class="about-product-card__img-wrap">
+				<div class="sect-2010__product-bg-wrap about-product-card__color-bg-wrap">
+					<div class="sect-2010__product-bg about-product-card__color-bg"></div>
+				</div>
+				<img src="./content/about-fetaxa/products/2010.png" class="about-product-card__img" alt="Упаковка фетаксы плавленный сыр с маслинами и паприкой">
+			</div>
+			<div class="sect-2010__product-text-content about-product-card__text-content">
+				<div class="sect-2010__product-title about-product-card__title">
+					фетакса
+				</div>
+				<h3 class="sect-2010__product-subtitle about-product-card__subtitle h3">«идеально для салата»</h3>
+				<a href="#" class="sect-2010__product-button about-product-card__button button">Попробовать</a>
+			</div>
+		</div>
+	</section>
+	<section class="about-fetaxa-page__2012 sect-2012">
+		<div class="sect-2012__img-block about-fetaxa-img-block">
+			<div class="sect-2012__img-col">
+				<img src="./content/about-fetaxa/2012.jpg" class="sect-2012__img" alt="Бутерброды с фетаксой">
+			</div>
+		</div>
+		<div class="sect-2012__history-card-row">
+			<div class="history-point">
+				<div class="history-point__col">
+					<div class="history-point__img-container">
+						<div class="history-point__img"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sect-2012__history-card history-card">
+				<div class="history-card__title">
+					<span class="history-card__year">2012</span>
+					<span class="h6">год</span>
+				</div>
+				<h3 class="history-card__subtitle h3">Классика в рассоле</h3>
+				<div class="sect-2012__history-description history-card__description b-content b-content_p1">
+					<p>
+						У Фетаксы «Классической в рассоле» другая, невероятно нежная, консистенция, поэтому этот сыр очень легко размять. «Фетаксу в рассоле» удобно использовать в качестве мягкой начинки в горячих и холодных блюдах, например, в пирогах, что значительно облегчает их приготовление, поскольку хозяйке не надо тереть продукт на тёрке.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sect-2012__product-card about-product-card">
+			<div class="sect-2012__product-add-text b-content b-content_p1 b-content_color_1">
+				<p>Кроме того, Фетакса «Классическая в рассоле» прекрасно подходит для создания лёгких закусок – с хлебом, а также с кусочком огурца или помидора.Удобная упаковка – ванночка «Фетаксы» и Фетаксы «Классической в рассоле» – позволяет легко извлекать и хранить продукт.</p>
+			</div>
+			<div class="sect-2012__product-img-wrap about-product-card__img-wrap">
+				<div class="sect-2012__product-bg-wrap about-product-card__color-bg-wrap">
+					<div class="sect-2012__product-bg about-product-card__color-bg"></div>
+				</div>
+				<img src="./content/about-fetaxa/products/2012.png" class="about-product-card__img" alt="Упаковка фетаксы в рассоле">
+			</div>
+			<div class="sect-2012__product-text-content about-product-card__text-content">
+				<div class="sect-2012__product-title about-product-card__title">
+					фетакса
+				</div>
+				<h3 class="sect-2012__product-subtitle about-product-card__subtitle h3">«классическая в рассоле»</h3>
+				<a href="#" class="sect-2012__product-button about-product-card__button button">Попробовать</a>
+			</div>
+		</div>
+	</section>
+	<section class="about-fetaxa-page__2017 sect-2017">
+		<img class="sect-2017__pattern" src="./img/about-fetaxa/patterns/pattern_3.svg" alt="Фоновый орнамент 3">
+		<div class="sect-2017__img-block about-fetaxa-img-block">
+			<div class="sect-2017__img-col">
+				<img src="./content/about-fetaxa/2017.jpg" class="sect-2017__img" alt="Бутерброд с красной рыбой и сыром">
+			</div>
+		</div>
+		<div class="sect-2017__history-card-row">
+			<div class="history-point">
+				<div class="history-point__col">
+					<div class="history-point__img-container">
+						<div class="history-point__img"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sect-2017__history-card history-card">
+				<div class="history-card__title">
+					<span class="history-card__year">2017</span>
+					<span class="h6">год</span>
+				</div>
+				<h3 class="history-card__subtitle h3">Ломтики Фетаксы</h3>
+				<div class="sect-2017__history-description history-card__description b-content b-content_p1">
+					<p>
+						В 2017 году в Бренде появилась новинка – «Ломтики Фетаксы». Это первый продукт на рынке феты в России, который удобно взять с собой, так как ломтики уже порезаны и каждый упакован в индивидуальный пакетик. Также «Ломтики Фетаксы» отлично подходят для перекуса дома.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sect-2017__product-card about-product-card">
+			<div class="about-product-card__img-wrap">
+				<div class="sect-2017__product-bg-wrap about-product-card__color-bg-wrap">
+					<div class="sect-2017__product-bg about-product-card__color-bg"></div>
+				</div>
+				<img src="./content/about-fetaxa/products/2017.png" class="about-product-card__img" alt="Упаковка с ломтиками плавленного сыра">
+			</div>
+			<div class="sect-2017__product-text-content about-product-card__text-content">
+				<div class="sect-2017__product-title about-product-card__title">
+					фетакса
+				</div>
+				<h3 class="sect-2017__product-subtitle about-product-card__subtitle h3">«идеально для салата»</h3>
+				<a href="#" class="sect-2017__product-button about-product-card__button button button_light">Попробовать</a>
+			</div>
+		</div>
+	</section>
+	<section class="sect-2020">
+		<div class="sect-2020__history-card-row">
+			<div class="sect-2020__history-card history-card">
+				<div class="history-card__title">
+					<span class="history-card__year">2020</span>
+					<span class="h6">год</span>
+				</div>
+				<h3 class="history-card__subtitle h3">Ломтики Фетаксы</h3>
+				<div class="sect-2020__history-description history-card__description b-content b-content_p1">
+					<p>
+						С любой «Фетаксой» можно приготовить множество блюд,
+						так как она прекрасно сочетается со свежими овощами, зеленью, мясом или рыбой, делая блюда вкусными, а ежедневное меню – разнообразным. Поэтому даже в большой семье хозяйке и маме будет легко угодить близким и порадовать их вкусненьким
+						с «Фетаксой», не затрачивая на это много сил и времени.
+					</p>
+				</div>
+				<a href="https://fetaxa.cdscompany.ru/recipes" class="sect-2020__product-button about-product-card__button button">Перейти к рецептам</a>
+			</div>
+		</div>
+		<div class="sect-2020__img-block about-fetaxa-img-block">
+			<div class="sect-2020__img-block-inner">
+				<h3 class="h3">С ФЕТАКСОЙ</h3>
+				<img src="./content/about-fetaxa/2020.svg" class="sect-2020__img" alt="Слоган 'Творить легко'">
+			</div>
+		</div>
+		<div class="history-point">
+			<div class="history-point__col">
+				<div class="sect-2020__history-point-container history-point__img-container">
+					<div class="sect-2020__history-point-line"></div>
+					<div class="sect-2020__history-point-img"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer class="footer container-fluid b-content b-content_p3">
+	<div class="footer__inner">
+		<a class="footer__logo-wrap" href="./home.html">
+			<img class="footer__logo" src="./img/footer-logo.svg">
+		</a>
+		<div class="footer__copyright footer-copyright">
+			<p class="footer-copyright__item">© 2010-2019 ООО «Хохланд Руссланд».</p>
+			<p class="footer-copyright__item">Все права защищены.</p>
+			<a class="footer-copyright__item footer-copyright__item_link link" href="https://www.hochland-group.com/" target="_blank">www.hochland-group.com</a>
+		</div>
+		<div class="footer__links">
+			<nav class="footer__menu footer-menu">
+				<a href="./about-fetaxa.html" class="footer-menu__item">о Фетаксе</a>
+				<a href="./recipes.html" class="footer-menu__item">рецепты</a>
+				<a href="#" class="footer-menu__item">где купить</a>
+			</nav>
+			<ul class="social">
+				<li class="social__item">
+					<a href="https://www.instagram.com/fetaxa_ru/" target="_blank">
+						<img src="./img/icons/social/insta.svg"></a>
+				</li>
+				<li class="social__item">
+					<a href="https://www.facebook.com/Fetaxa" target="_blank">
+						<img src="./img/icons/social/fb.svg"></a>
+				</li>
+				<li class="social__item">
+					<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank">
+						<img src="./img/icons/social/youtube1.svg"></a>
+				</li>
+				<li class="social__item">
+					<a href="http://vk.com/fetaxa" target="_blank">
+						<img src="./img/icons/social/vk.svg"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<script src="./js/b-header.js"></script>
+</body>
+</html>

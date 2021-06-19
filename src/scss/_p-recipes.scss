@@ -1,0 +1,186 @@
+@import "_vars"; // Импорт переменных всегда первый
+
+.recipes {
+	&__dashboard {
+		margin-bottom: 64px;
+		@include media(xs) {
+			margin-bottom: 24px;
+		}
+	}
+}
+.recipes-slider {
+	box-shadow: 0 4px 164px #dfeff9;
+	.slick-arrow {
+		z-index: 1;
+		top: auto;
+		bottom: 214px;
+		width: 88px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		@include media(sm) {
+			bottom: 161px;
+		}
+		@include media(xs) {
+			bottom: 28px;
+		}
+	}
+	.slick-prev,
+	.slick-next {
+		&:before {
+			content: "";
+		}
+	}
+	.slick-prev {
+		background-image: url("data:image/svg+xml,%3Csvg width='90' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M90 6H2m0 0l5 5M2 6l5-5' stroke='%236DD1FF' stroke-width='2'/%3E%3C/svg%3E");
+		left: calc(((3 / 12) * 100%) + 20px);
+		@include media(xs) {
+			left: 16px;
+		}
+	}
+	.slick-next {
+		background-image: url("data:image/svg+xml,%3Csvg width='90' height='12' viewBox='0 0 90 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6H88M88 6L83 1M88 6L83 11' stroke='%236DD1FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+		right: calc(((3 / 12) * 100%) + 20px);
+		@include media(xs) {
+			right: 16px;
+		}
+	}
+	.slick-dots {
+		left: 0;
+		bottom: 64px;
+		@include media(xs) {
+			bottom: 40px;
+		}
+		li {
+			height: auto;
+			width: auto;
+			margin: 0 4px;
+			button {
+				width: 16px;
+				height: 16px;
+				border: 3px solid $bg2;
+				border-radius: 50%;
+				box-sizing: border-box;
+				&:before {
+					content: none;
+				}
+			}
+			&.slick-active {
+				button {
+					background-color: $bg2;
+				}
+			}
+		}
+	}
+	&.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+}
+.recipes-slide {
+	&__main-content {
+		display: flex;
+		//padding-left: $grid-gutter-width / 2;
+		//padding-right: $grid-gutter-width / 2;
+		@include media(xs) {
+			flex-direction: column-reverse;
+			margin-bottom: 32px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	&__text-content,
+	&__img-wrap {
+		@include media(xs) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+	&__text-content {
+		display: flex;
+		justify-content: flex-start;
+		font-family: "FuturaBookC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+	&__text-content-inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		width: calc((4 / 5) * 100%);
+		@include media(xs) {
+			width: auto;
+			align-items: center;
+		}
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__logo {
+		width: 312px;
+		margin-bottom: 18px;
+		@include media(xs) {
+			width: 198px;
+			margin-bottom: 0;
+		}
+	}
+	&__slogan {
+		width: 184px;
+		margin-bottom: 30px;
+		@include media(xs) {
+			width: 298px;
+			margin-bottom: 40px;
+		}
+	}
+	&__description {
+		margin-bottom: 40px;
+		@include media(xs) {
+			text-align: center;
+		}
+	}
+	&__subdescription {
+		color: $text2;
+		@include media(xs) {
+			text-align: center;
+			width: 100%;
+		}
+	}
+	&__img-wrap {
+		@include media(xs) {
+			margin-bottom: 32px;
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+	&__product {
+		position: relative;
+		height: 309px;
+		@include media(sm) {
+			height: 256px;
+		}
+		@include media(xs) {
+			height: auto;
+			padding-bottom: 80px;
+		}
+	}
+	&__product-img {
+		position: absolute;
+		bottom: 96px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 608px;
+		@include media(sm) {
+			width: 448px;
+		}
+		@include media(xs) {
+			position: static;
+			width: 269px;
+			transform: translateX(0);
+			margin: auto;
+		}
+	}
+}

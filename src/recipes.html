@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Рецепты</title>
+
+	<link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="./favicon/apple-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/webmanifest.webmanifest">
+	<meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#6dd1ff">
+
+	<link rel="stylesheet" href="./css/libs/bootstrap.css">
+	<link rel="stylesheet" href="./css/libs/slick.css">
+	<link rel="stylesheet" href="./css/libs/slick-theme.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<script src="./js/libs/jquery-3.2.1.min.js"></script>
+	<script src="./js/libs/jquery.smoothscroll.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/libs/slick.min.js"></script>
+
+	<script src="./js/p-recipes.js"></script>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-P4262RB');</script>
+	<!-- End Google Tag Manager -->
+</head>
+<body class="page-recipes">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4262RB"
+									height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="header">
+	<div class="container-fluid header__inner">
+		<button class="header__close-button close-button js-tgl-dropdown-menu"></button>
+		<button class="burger js-tgl-dropdown-menu">
+			<span class="burger__item"></span>
+			<span class="burger__item"></span>
+			<span class="burger__item"></span>
+		</button>
+		<a  href="./home.html">
+			<img class="header__logo" src="./img/logo_slogan.png">
+		</a>
+		<div class="header__menu">
+			<nav class="header-menu">
+				<a href="./recipes.html" class="header-menu__item"><h4 class="header-menu__item h4">Рецепты</h4></a>
+				<a href="./about-fetaxa.html" class="header-menu__item"><h4 class="h4">о фетаксе</h4></a>
+				<a href="#" class="header-menu__item"><h4 class="h4">где купить</h4></a>
+				<a href="https://www.instagram.com/fetaxa_ru/" target="_blank" class="header-menu__item"><h4 class="h4">вкусный instagram</h4></a>
+				<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank" class="header-menu__item"><h4 class="h4">мы в эфире</h4></a>
+			</nav>
+		</div>
+		<button class="header__search-button search-button js-tgl-header-search">
+			<img class="header__search-icon" src="./img/icons/search.svg">
+		</button>
+		<div class="header__search-form-wrap">
+			<div class="header__search-form container-fluid">
+				<form action="./search.html/" class="header-form-search">
+					<div class="header-form-search__field">
+						<input class="form-search-input" name="q" type="search" placeholder="Введите текст для поиска">
+						<button class="header-form-search__search search-button js-tgl-header-search" type="button">
+							<img class="search-button__icon" src="./img/icons/search.svg">
+						</button>
+						<button class="header-form-search__reset close-button js-tgl-header-search" type="reset"></button>
+					</div>
+				</form>
+				<div class="header__search-dropdown header-search-dropdown">
+					<div class="header-search-dropdown__title b-content b-content_p2 b-content_color_4">
+						<p>Все результаты</p>
+					</div>
+					<ul class="header-search-dropdown__list">
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/1.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Блины с Фетаксой «Классической в рассоле», рыбкой, творогом и зеленью</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/2.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Салат «Особенный» с Фетаксой «Классической в рассоле»</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/3.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Спагетти с перепелиным яйцом, Фетаксой «Классической в рассоле» и перцем
+								</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/4.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Луковый пирог с Фетаксой «Классической в рассоле»</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/5.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Салат с редисом, огурцом и Фетаксой «Классической в рассоле»</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/6.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Горячие бутерброды с Фетаксой «Классической в рассоле» и глазуньей</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/3.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Спагетти с перепелиным яйцом, Фетаксой «Классической в рассоле» и перцем</h6>
+							</a>
+						</li>
+						<li class="header-search-dropdown__item">
+							<a href="#" class="header-search-dropdown__link">
+								<img src="./img/search-result/1.jpg" class="header-search-dropdown__img">
+								<h6 class="h6">Блины с Фетаксой «Классической в рассоле», рыбкой, творогом и зеленью</h6>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid
+		 						header__dropdown-menu
+		 						header-dropdown-menu
+		 						popup"
+		>
+			<nav class="header-dropdown-menu__main-list header-dropdown-menu-main-list">
+				<a href="./about-fetaxa.html" class="header-dropdown-menu-main-list__item"><h2 class="h2">о фетаксе</h2></a>
+				<a href="./recipes.html" class="header-dropdown-menu-main-list__item"><h2 class="h2">Рецепты</h2></a>
+				<a href="#" class="header-dropdown-menu-main-list__item"><h2 class="h2">где купить</h2></a>
+			</nav>
+			<nav class="header-dropdown-menu__second-list header-dropdown-menu-second-list">
+				<a href="https://www.instagram.com/fetaxa_ru/" target="_blank" class="header-dropdown-menu-second-list__item"><h4 class="h4">вкусный instagram</h4></a>
+				<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank" class="header-dropdown-menu-second-list__item"><h4 class="h4">тв-ролики</h4></a>
+			</nav>
+			<div class="header-dropdown-menu__footer header-dropdown-menu-footer">
+				<div>
+					<nav class="header-dropdown-menu-footer__menu header-dropdown-menu-footer-menu">
+						<a href="./home.html#feedback-form" class="header-dropdown-menu-footer-menu__item link js-tgl-dropdown-menu">Обратная связь</a>
+						<a href="#" class="header-dropdown-menu-footer-menu__item link">Пользовательское соглашение</a>
+					</nav>
+					<ul class="social">
+						<li class="social__item">
+							<a href="https://www.instagram.com/fetaxa_ru/" target="_blank">
+								<img src="./img/icons/social/insta.svg"></a>
+						</li>
+						<li class="social__item">
+							<a href="https://www.facebook.com/Fetaxa" target="_blank">
+								<img src="./img/icons/social/fb.svg"></a>
+						</li>
+						<li class="social__item">
+							<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank">
+								<img src="./img/icons/social/youtube1.svg"></a>
+						</li>
+						<li class="social__item">
+							<a href="http://vk.com/fetaxa" target="_blank">
+								<img src="./img/icons/social/vk.svg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+	<section class="recipes__slider recipes-slider">
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/slide1.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/slide1.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/big-big-img.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/big-big-img1.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/big-big-img2.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/big-big-img3.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/big-big-img4.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+		<div class="recipes-slider__slide recipes-slide">
+			<div class="recipes-slide__main-content">
+				<div class="recipes-slide__text-content col-5">
+					<div class="recipes-slide__text-content-inner">
+						<div class="recipes-slide__title">
+							<img class="recipes-slide__logo" src="./img/logo.svg">
+							<img class="recipes-slide__slogan" src="./content/recipe/slider/subtitle.svg">
+						</div>
+						<div class="recipes-slide__description b-content b-content_p2 b-content_color_3">
+							<p>Обладает сбалансированным умернно соленым вкусом и особенной нежной косистенций. Удобно использовать в качестве мягкой начинки в горячих и холодных блюдах</p>
+						</div>
+						<div class="recipes-slide__subdescription b-content b-content_p1 b-content_color_4">
+							<p>Идеально для салата 200г. и 400г.</p>
+						</div>
+					</div>
+				</div>
+				<div class="recipes-slide__img-wrap col-7">
+					<img src="./content/recipe/slider/big-big-img5.jpg" alt="Картофель с фетаксой на тарелке" class="recipes-slide__img">
+				</div>
+			</div>
+			<div class="recipes-slide__product container-fluid">
+				<img class="recipes-slide__product-img"
+						 alt="Упаковка фетаксы"
+						 src="./content/sliders/slider-recipes/slide1.png">
+			</div>
+		</div>
+	</section>
+	<section class="recipes__dashboard recipes-dashboard container-fluid">
+		<h2 class="recipes-dashboard__title h2">
+			Рецепты
+			<div class="recipes-dashboard__subtitle">
+				с этим продуктом
+			</div>
+		</h2>
+		<div class="recipes-dashboard__form-wrap">
+			<form class="recipes-dashboard__form">
+				<div class="recipes-dashboard__form-header">
+					<div class="recipes-dashboard__form-title">Параметры подбора</div>
+					<button class="recipes-dashboard__close-button close-button js-tgl-dashboard" type="button"></button>
+				</div>
+				<div class="recipes-dashboard__inputs row">
+					<div class="recipes-dashboard__search-element col-4">
+						<select class="recipes-dashboard__select select"> <!--Supplement an id here instead of using 'name'-->
+								<option value="value_default" selected>Любая категория</option>
+								<option value="value1">Основные блюда</option>
+								<option value="value2">Выпечка и десерты</option>
+								<option value="value3">Завтраки</option>
+							</select>
+					</div>
+					<div class="recipes-dashboard__search-element col-4">
+						<select class="recipes-dashboard__select select">
+							<option value="value_default" selected>Любое блюдо</option>
+							<option value="value1">Паста и пицца</option>
+							<option value="value2">Сэндвичи</option>
+							<option value="value3">Салаты</option>
+						</select>
+					</div>
+					<div class="recipes-dashboard__search-element col-4">
+						<select class="recipes-dashboard__select select">
+							<option value="value_default" selected>Любая кухня</option>
+							<option value="value1">Европейская кухня</option>
+							<option value="value2">Азиатская кухня</option>
+							<option value="value3">Австралийская кухня</option>
+						</select>
+					</div>
+					<div class="recipes-dashboard__search-element	recipes-dashboard__search-element_column col-4"
+					>
+						Включить ингредиенты
+						<div  class="recipes-dashboard__multiselect multiselect">
+							<span class="recipes-dashboard__multiselect-placeholder">+ Ингредиент</span>
+							<ul class="recipes-dashboard__multiselect-dropdown recipes-dashboard__multiselect-dropdown_add">
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_1"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_1">
+										<span class="recipes-dashboard__multiselect-item-text">Огурец</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_2"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_2">
+										<span class="recipes-dashboard__multiselect-item-text">Креветки</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_40"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_40">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_4"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_4">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_5"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_5">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_6"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_6">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_7"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_7">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_8"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_8">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_9"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_9">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_10"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_10">
+										<span class="recipes-dashboard__multiselect-item-text">Очень длинное название ингредиента для краш-теста поля</span>
+									</label>
+								</li>
+							</ul>
+							<div class="recipes-dashboard__multiselect-arrow-wrap js-tgl-dropdown-ingredients-add">
+								<div class="recipes-dashboard__arrow-down"></div>
+							</div>
+						</div>
+					</div>
+					<div class="recipes-dashboard__search-element	recipes-dashboard__search-element_column col-4"
+					>
+						Исключить ингредиенты
+						<div class="recipes-dashboard__multiselect multiselect">
+							<span class="recipes-dashboard__multiselect-placeholder">+ Ингредиент</span>
+							<ul class="recipes-dashboard__multiselect-dropdown recipes-dashboard__multiselect-dropdown_exclude">
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_exclude_1"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_exclude_1">
+										<span class="recipes-dashboard__multiselect-item-text">Хлеб</span>
+									</label>
+								</li>
+								<li class="recipes-dashboard__multiselect-item">
+									<input id="recipe-ingredient_exclude_2"
+												 type="checkbox"
+												 class="input-checkbox"
+									>
+									<label class="recipes-dashboard__multiselect-item-content checkbox checkbox_small" for="recipe-ingredient_exclude_2">
+										<span class="recipes-dashboard__multiselect-item-text">Лук</span>
+									</label>
+								</li>
+							</ul>
+							<div class="recipes-dashboard__multiselect-arrow-wrap js-tgl-dropdown-ingredients-exclude">
+								<div class="recipes-dashboard__arrow-down"></div>
+							</div>
+						</div>
+					</div>
+					<div class="recipes-dashboard__search-element recipes-dashboard__search-element-checkboxes col-4">
+						<div class="recipes-dashboard__search-element-checkbox">
+							<input id="photo-recipe" class="input-checkbox" type="checkbox">
+							<label class="recipes-dashboard__search-element-checkbox-content checkbox" for="photo-recipe">
+								Пошаговые фоторецепты
+							</label>
+						</div>
+						<div class="recipes-dashboard__search-element-checkbox">
+							<input id="video-recipe" class="input-checkbox" type="checkbox">
+							<label class="recipes-dashboard__search-element-checkbox-content checkbox" for="video-recipe">
+								Видео рецепты
+							</label>
+						</div>
+
+					</div>
+				</div>
+				<button class="recipes-dashboard__submit button" type="submit">
+					Показать 299 рецептов
+				</button>
+			</form>
+		</div>
+		<button class="recipes-dashboard__toggle-form js-tgl-dashboard">
+			<img src="./img/icons/dashboard.svg" class="recipes-dashboard__dashboard-icon">
+			Показать параметры
+		</button>
+	</section>
+	<section class="recipes__result container-fluid">
+		<div class="recipes__result-inner row">
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="recipes-card">
+					<div class="recipes-card__inner">
+						<div class="recipes-card__img"></div>
+						<h6 class="recipes-card__description h6">
+							Сэндвич с “Ломтиками Фетаксы” и лососем
+						</h6>
+						<div class="recipes-card__buttons">
+							<button class="recipes-card__button">
+								<img class="recipes-card__clock-icon" src="./img/icons/cloсk.svg" alt="clock">
+								10 мин
+							</button>
+							<button class="recipes-card__button">Смотреть</button>
+						</div>
+						<div class="recipes-card__tooltip">
+							<ul class="recipes-card__ingredients-list b-content b-content_p2">
+								<li class="recipes-card__ingredients-item"><p>Оливковое масло <strong>- г 20 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Редис <strong>- 100 г</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный перец Чили <strong>- 1 шт</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Фетакса “Классическая в рассоле” <strong>- 40 гр</strong></p></li>
+								<li class="recipes-card__ingredients-item"><p>Красный базилик <strong>- 2 веточки</strong></p></li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+</main>
+<footer class="footer container-fluid b-content b-content_p3">
+	<div class="footer__inner">
+		<a class="footer__logo-wrap" href="./home.html">
+			<img class="footer__logo" src="./img/footer-logo.svg">
+		</a>
+		<div class="footer__copyright footer-copyright">
+			<p class="footer-copyright__item">© 2010-2019 ООО «Хохланд Руссланд».</p>
+			<p class="footer-copyright__item">Все права защищены.</p>
+			<a class="footer-copyright__item footer-copyright__item_link link" href="https://www.hochland-group.com/" target="_blank">www.hochland-group.com</a>
+		</div>
+		<div class="footer__links">
+			<nav class="footer__menu footer-menu">
+				<a href="./about-fetaxa.html" class="footer-menu__item">о Фетаксе</a>
+				<a href="./recipes.html" class="footer-menu__item">рецепты</a>
+				<a href="#" class="footer-menu__item">где купить</a>
+			</nav>
+			<ul class="social">
+				<li class="social__item">
+					<a href="https://www.instagram.com/fetaxa_ru/" target="_blank">
+						<img src="./img/icons/social/insta.svg"></a>
+				</li>
+				<li class="social__item">
+					<a href="https://www.facebook.com/Fetaxa" target="_blank">
+						<img src="./img/icons/social/fb.svg"></a>
+				</li>
+				<li class="social__item">
+					<a href="https://www.youtube.com/channel/UC_XhdRzIMGkb6qIZLfFg1iw" target="_blank">
+						<img src="./img/icons/social/youtube1.svg"></a>
+				</li>
+				<li class="social__item">
+					<a href="http://vk.com/fetaxa" target="_blank">
+						<img src="./img/icons/social/vk.svg"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<script src="./js/libs/jquery.switchPopup.js"></script>
+
+<script src="./js/b-header.js"></script>
+</body>
+</html>

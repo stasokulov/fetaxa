@@ -1,0 +1,274 @@
+.recipes-dashboard {
+	$p: &;
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 32px;
+		margin-bottom: 40px;
+	}
+	&__subtitle {
+		font-family: "FuturaBookC", sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 32px;
+		text-transform: lowercase;
+	}
+	&__form-wrap {
+		@include media(xs) {
+			display: none;
+			position: fixed;
+			opacity: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 62px 16px 16px;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 1;
+			overflow: scroll;
+		}
+		&_display {
+			display: block;
+		}
+		&_visible {
+			opacity: 1;
+		}
+	}
+	&__form {
+		font-family: "FuturaBookC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 1.2px;
+		color: $text6;
+		background-color: $bg1;
+		@include media(xs) {
+			padding: 16px;
+		}
+	}
+	&__form-header {
+		display: none;
+		@include media(xs) {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
+	}
+	&__form-title {
+		font-family: "FuturaFuturisC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: $text4;
+	}
+	&__toggle-form {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 18px;
+		line-height: 23px;
+		text-align: center;
+		letter-spacing: 1.2px;
+		color: $bg1;
+		background-color: $bg2;
+		border: none;
+		border-radius: 2px;
+		height: 55px;
+		width: 100%;
+		cursor: pointer;
+		margin-top: 24px;
+		@include media(xs) {
+			display: flex;
+		}
+	}
+	&__dashboard-icon {
+		height: 32px;
+		width: 32px;
+		margin-right: 16px;
+	}
+	&__search-element {
+		display: flex;
+		margin-bottom: 40px;
+		&_column {
+			flex-direction: column;
+		}
+		@include media(xs) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-bottom: 24px;
+		}
+	}
+	&__inputs {
+		//margin-bottom: 33px;
+	}
+	&__search-element-checkboxes {
+		display: flex;
+		align-items: flex-end;
+		@include media(xs) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__search-element-checkbox {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+		@include media(xs) {
+			height: auto;
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 16px;
+			}
+		}
+	}
+	&__search-element-checkbox-content {
+		display: flex;
+		align-items: center;
+		padding-left: 40px;
+		margin-bottom: 0;
+		height: 32px;
+	}
+	&__select {
+		width: 100%;
+	}
+	&__option {
+		color: #6dd1ff;
+	}
+	&__multiselect {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 40px;
+		padding-left: 4px;
+	}
+	&__multiselect-arrow-wrap {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		cursor: pointer;
+	}
+	&__arrow-down{
+		position: absolute;
+		top: 50%;
+		right: 9px;
+		transform: translate(0, -50%);
+		width: 0;
+		height: 0;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-top-color: $bg2;
+		border-bottom-color: $bg4;
+		border-style: solid;
+		border-width: 6px 4px 0;
+	}
+	&__multiselect-placeholder {
+		font-family: "FuturaBookC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+		color: $text6;
+		opacity: 0.6;
+	}
+	&__multiselect-dropdown {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 26px;
+		list-style: none;
+		margin: 0;
+		padding-top: 2px;
+		padding-left: 4px;
+		background-color: #fff;
+		max-height: 330px;
+		overflow: hidden auto;
+		.checkbox:before,
+		.checkbox:after {
+			content: none;
+		}
+		&_visible {
+			display: block;
+			top: 40px;
+			left: 0;
+			width: 100%;
+			padding-top: 12px;
+			padding-left: 8px;
+			padding-bottom: 16px;
+			background-color: $bg1;
+			z-index: 1;
+			box-shadow: 0 4px 20px rgba(0, 48, 88, 0.1);
+			.checkbox:before,
+			.checkbox:after {
+				content: "";
+			}
+			#{$p}__multiselect-item {
+				background-color: transparent;
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+			}
+			#{$p}__multiselect-item-content {
+				display: flex;
+				padding-left: 40px;
+				font-family: "FuturaBookC", sans-serif;
+				font-size: 18px;
+				line-height: 20px;
+				letter-spacing: 1.2px;
+				color: $text5;
+			}
+		}
+	}
+	&__multiselect-item {
+		background-color: $bg2;
+		&:not(:last-child) {
+			margin-right: 4px;
+		}
+		.input-checkbox:checked + #{$p}__multiselect-item-content {
+			display: flex;
+		}
+	}
+	&__multiselect-item-content {
+		display: none;
+		align-items: center;
+		padding: 4px 13px 4px 10px;
+		margin-bottom: 0;
+		font-family: "FuturaBookC", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+		color: $text1;
+		text-align: start;
+		white-space: nowrap;
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+	}
+	&__multiselect-item-text {
+		overflow: hidden;
+	}
+
+	// Отключенный стиль для разворота стрелочки
+	//&__multiselect-dropdown_visible + &__multiselect-arrow-wrap {
+	//	#{$p}__arrow-down {
+	//		border-width: 0 4px 6px;
+	//	}
+	//}
+
+	&__submit {
+		display: block;
+		margin: auto;
+	}
+}

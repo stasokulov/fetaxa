@@ -1,0 +1,81 @@
+@import "_vars"; // Импорт переменных всегда первый
+
+.footer {
+	display: flex;
+	justify-content: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	&__inner {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		@include media(xs) {
+			justify-content: center;
+		}
+	}
+	&__logo-wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include media(xs) {
+			position: static;
+			transform: translate(0, 0);
+			margin-right: 22px;
+		}
+	}
+	&__logo {
+		width: 89px;
+		height: 61px;
+		@include media(xs) {
+			position: static;
+			transform: translate(0, 0);
+			width: 59px;
+			height: 41px;
+		}
+	}
+	&__links {
+		@include media(xs) {
+			display: none;
+		}
+	}
+	&__social {
+		justify-content: flex-end;
+	}
+}
+.footer-copyright {
+	display: flex;
+	flex-direction: column;
+	&__item {
+		&_link {
+			text-decoration: underline;
+			color: $text4;
+		}
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+}
+.footer-menu {
+	display: flex;
+	list-style: none;
+	font-family: "FuturaBookC", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	padding: 0;
+	margin-bottom: 16px;
+	&__item {
+		color: $text2;
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+		&:first-letter {
+			text-transform: uppercase;
+		}
+	}
+}
